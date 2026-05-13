@@ -623,3 +623,179 @@ footer {
     display: none;
   }
 }
+/* ==========================================
+   INVESTMENT PAGE
+========================================== */
+
+.investment-hero {
+  min-height: 80vh;
+  background: var(--cream);
+  color: var(--olive-brown);
+  padding: 42px 4vw 80px;
+}
+
+.investment-intro {
+  max-width: 980px;
+  margin: 120px auto 0;
+  text-align: center;
+}
+
+.investment-intro h1 {
+  font-size: clamp(70px, 11vw, 150px);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -5px;
+  margin-bottom: 32px;
+}
+
+.investment-intro p:last-child {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--soft-taupe);
+}
+
+.investment-expect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  padding: 110px 5vw;
+  background: var(--warm-white);
+  align-items: start;
+}
+
+.investment-expect p {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.pricing-section {
+  padding: 110px 5vw;
+  background: var(--cream);
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+  text-align: left;
+}
+
+.pricing-card {
+  background: var(--warm-white);
+  padding: 22px;
+}
+
+.pricing-card img {
+  height: 420px;
+  margin-bottom: 28px;
+}
+
+.pricing-card h3 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 18px;
+  color: var(--olive-brown);
+}
+
+.pricing-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.pricing-card li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(91, 80, 61, 0.25);
+  padding: 12px 0;
+}
+
+.pricing-card span {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--olive-brown);
+}
+
+.pricing-card strong {
+  display: block;
+  font-size: 48px;
+  font-weight: 400;
+  margin: 4px 0 24px;
+}
+
+.faq-section {
+  padding: 110px 5vw;
+  background: var(--deep-sage);
+  color: var(--warm-white);
+}
+
+.faq-section .eyebrow,
+.faq-section h2 {
+  color: var(--warm-white);
+}
+
+.faq-list {
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 253, 248, 0.35);
+}
+
+.faq-list div {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.4fr;
+  gap: 30px;
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255, 253, 248, 0.35);
+}
+
+.faq-list span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--sage);
+}
+
+.faq-list h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.faq-list p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .investment-expect,
+  .pricing-grid,
+  .faq-list div {
+    grid-template-columns: 1fr;
+  }
+
+  .investment-intro {
+    margin-top: 70px;
+  }
+
+  .pricing-card img {
+    height: 420px;
+  }
+
+  .faq-list div {
+    gap: 14px;
+  }
+}
