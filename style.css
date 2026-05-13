@@ -1477,3 +1477,31 @@ footer {
     height: 230px;
   }
 }
+/* ==========================================
+   JADE WEST LOGO FONT
+========================================== */
+
+.editorial-logo {
+  text-align: center;
+  color: var(--olive-brown) !important;
+  line-height: 0.72;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+}
+
+.editorial-logo span {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(72px, 8vw, 128px);
+  font-weight: 400;
+  letter-spacing: -3px;
+  text-transform: lowercase;
+}
+
+.editorial-logo small {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 18px;
+}
