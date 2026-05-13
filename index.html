@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jade West Photography</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
@@ -24,121 +24,202 @@
   </svg>
 </div>
 
-<header class="editorial-hero">
-  <nav class="editorial-nav">
-    <div class="nav-left">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#experience">Info</a>
-    </div>
+<header class="home-hero">
+  <nav class="site-nav">
+    <a href="#portfolio">Portfolio</a>
+    <a href="#experience">Experience</a>
 
-    <a href="#" class="editorial-logo">
-      <span>jade</span>
-      <span>west</span>
-      <small>photography</small>
+    <a href="#" class="brand">
+      <span>Jade West</span>
+      <small>Photography</small>
     </a>
 
-    <div class="nav-right">
-      <a href="#about">About Me</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <button class="menu-toggle" id="menuToggle">Menu</button>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="hero-label">
-    <p>intimate weddings<br>portraits and storytelling<br>in southern california and worldwide</p>
-  </div>
-
-  <section class="hero-collage">
-    <img class="collage-left" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=90" alt="Wedding couple">
-    <img class="collage-main" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=90" alt="Wedding portrait">
-    <img class="collage-right" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=90" alt="Wedding landscape">
-
-    <div class="hero-title">
-      <h1>
-        <span>Reimagine</span>
-        <em>your</em>
-        <span>Story</span>
-      </h1>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Southern California + wherever your story takes us</p>
+      <h1>Photos for the wildly in love and fully themselves.</h1>
+      <p>
+        Wedding photography, portraits and storytelling for people who want their memories to feel natural, emotional and artfully preserved.
+      </p>
+      <a href="#contact" class="button">Inquire Now</a>
     </div>
-  </section>
 
-  <div class="hero-bottom-copy">
-    <p>
-      You deserve images that feel honest, meaningful and deeply alive. I’m here to preserve the feeling of your story as it naturally unfolds.
-    </p>
-    <a href="#experience" class="hero-button">Experience ></a>
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=90" alt="Wedding couple">
+    </div>
   </div>
 </header>
 
 <main>
 
-  <section id="portfolio" class="section portfolio-intro">
-    <p class="eyebrow">The work</p>
-    <h2>For the moments that feel like home.</h2>
+  <section class="hello-section">
+    <p class="script">hey beautiful human</p>
+    <h2>You deserve photos that feel like you.</h2>
     <p>
-      Wedding days, quiet portraits, happy chaos, soft details and the in-between moments that say everything without trying too hard.
+      Not stiff. Not overly posed. Not forced into someone else’s idea of perfect.
+      I’m here for the real laughs, soft glances, happy tears, quiet details and all the tiny in-between moments that make your story yours.
     </p>
   </section>
 
-  <section class="gallery-grid">
-    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=90" alt="Wedding ceremony">
-    <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?auto=format&fit=crop&w=1000&q=90" alt="Couple portrait">
-    <img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=1000&q=90" alt="Portrait session">
-    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=1000&q=90" alt="Editorial portrait">
-    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1000&q=90" alt="Lifestyle portrait">
-    <img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=1000&q=90" alt="Wedding detail">
+  <section id="portfolio" class="featured-section">
+    <div class="section-heading">
+      <p class="eyebrow">Featured stories</p>
+      <h2>Recent love, light and little moments.</h2>
+    </div>
+
+    <div class="featured-grid">
+      <article class="featured-card large">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90" alt="Wedding gallery">
+        <div>
+          <p>Weddings</p>
+          <h3>Emotional wedding days</h3>
+        </div>
+      </article>
+
+      <article class="featured-card">
+        <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?auto=format&fit=crop&w=900&q=90" alt="Couple session">
+        <div>
+          <p>Couples</p>
+          <h3>Soft, honest connection</h3>
+        </div>
+      </article>
+
+      <article class="featured-card">
+        <img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=900&q=90" alt="Portrait session">
+        <div>
+          <p>Portraits</p>
+          <h3>Natural portraits with soul</h3>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="experience" class="experience-section">
-    <p class="eyebrow">The experience</p>
-    <h2>Guided, natural and never forced.</h2>
+    <div class="experience-intro">
+      <p class="eyebrow">The experience</p>
+      <h2>Easy, intentional and never awkward.</h2>
+      <p>
+        I’ll guide you when you need it and step back when the moment is already speaking for itself.
+      </p>
+    </div>
 
     <div class="experience-cards">
       <div>
         <span>01</span>
-        <h3>We start with the feeling.</h3>
-        <p>Before the camera comes out, we talk through your story, your vision and what you want the day to feel like.</p>
+        <h3>Dream it up</h3>
+        <p>We talk through your vision, your people, your location and the feeling you want to remember.</p>
       </div>
 
       <div>
         <span>02</span>
-        <h3>You show up as yourself.</h3>
-        <p>I’ll gently guide when needed, but the magic is always in the real laughs, quiet glances and honest movement.</p>
+        <h3>Show up real</h3>
+        <p>You don’t need to know what to do. I’ll keep it relaxed, natural and true to you.</p>
       </div>
 
       <div>
         <span>03</span>
-        <h3>You receive images with soul.</h3>
-        <p>Your final gallery will feel timeless, emotional and true to the people, places and details that mattered most.</p>
+        <h3>Keep it forever</h3>
+        <p>You receive a gallery filled with honest, timeless images that bring you right back.</p>
       </div>
     </div>
   </section>
 
+  <section class="category-section">
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=90" alt="Wedding details">
+      <h3>Weddings</h3>
+      <p>For the big feelings, quiet moments and everything in between.</p>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=900&q=90" alt="Portrait photography">
+      <h3>Portraits</h3>
+      <p>For feeling comfortable, confident and fully yourself in front of the camera.</p>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=90" alt="Creative photography">
+      <h3>Creative</h3>
+      <p>For artists, brands and people who want imagery with a little more soul.</p>
+    </div>
+  </section>
+
   <section id="about" class="about-section">
-    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=1000&q=90" alt="Photographer portrait">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=90" alt="Photographer portrait">
+    </div>
 
     <div class="about-copy">
-      <p class="eyebrow">About Jade</p>
-      <h2>Southern California creative, storyteller and lover of the little things.</h2>
+      <p class="eyebrow">The girl behind the camera</p>
+      <h2>Hi, I’m Jade.</h2>
       <p>
-        I’m a photographer, graphic designer and musician with a heart for preserving real beauty. I’m married, I have three dogs and I believe the best images are the ones that feel effortless.
+        I’m a Southern California photographer, graphic designer and musician with a heart for storytelling. I’m married, I have three dogs and I believe the best images are the ones that feel honest.
       </p>
       <p>
-        My goal is to help you feel comfortable enough to be fully yourself, then turn that feeling into something timeless.
+        My work is all about capturing people as they naturally are: soft, joyful, emotional, imperfect, beautiful and completely themselves.
       </p>
+      <a href="#contact" class="button dark">Let’s make magic</a>
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <p class="eyebrow">Kind words</p>
+    <h2>“She made us feel so comfortable and captured everything exactly how it felt.”</h2>
+    <p>
+      Warm, natural and full of life. That’s the kind of gallery I want every person to walk away with.
+    </p>
+  </section>
+
+  <section class="journal-section">
+    <div class="section-heading">
+      <p class="eyebrow">From the journal</p>
+      <h2>Stories, sessions and inspiration.</h2>
+    </div>
+
+    <div class="journal-grid">
+      <article>
+        <img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?auto=format&fit=crop&w=900&q=90" alt="Wedding planning">
+        <p>Wedding Guide</p>
+        <h3>How to feel natural in your wedding photos</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?auto=format&fit=crop&w=900&q=90" alt="Couple session">
+        <p>Couples</p>
+        <h3>Why the in-between moments matter most</h3>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=900&q=90" alt="Portrait session">
+        <p>Portraits</p>
+        <h3>What to wear for a soft editorial session</h3>
+      </article>
     </div>
   </section>
 
   <section class="quote-section">
-    <h2>Photographs for the love that feels real, tender and completely yours.</h2>
+    <h2>For the love that feels real, a little wild and completely yours.</h2>
   </section>
 
   <section id="contact" class="contact-section">
-    <p class="eyebrow">Inquire</p>
+    <p class="eyebrow">Ready when you are</p>
     <h2>Tell me what you’re dreaming up.</h2>
-    <p>Based in Southern California. Available for weddings, portraits, creative projects and travel.</p>
-    <a href="mailto:your@email.com" class="hero-button">Email Jade</a>
+    <p>
+      Based in Southern California. Available for weddings, portraits, creative projects and travel.
+    </p>
+    <a href="mailto:your@email.com" class="button">Inquire Now</a>
+  </section>
+
+  <section class="instagram-strip">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=90" alt="Instagram preview">
+    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=90" alt="Instagram preview">
+    <img src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=600&q=90" alt="Instagram preview">
+    <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c44?auto=format&fit=crop&w=600&q=90" alt="Instagram preview">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=90" alt="Instagram preview">
   </section>
 
 </main>
@@ -148,6 +229,6 @@
   <p>Southern California · Weddings · Portraits · Creative Direction</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
