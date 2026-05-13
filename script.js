@@ -1,15 +1,21 @@
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const navGroups = document.querySelectorAll(".nav-left, .nav-right");
 const beeCursor = document.getElementById("bee-cursor");
 
-if (menuToggle && navLinks) {
+if (menuToggle && navGroups.length) {
   menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    navGroups.forEach((group) => {
+      group.classList.toggle("active");
+    });
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+  navGroups.forEach((group) => {
+    group.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navGroups.forEach((item) => {
+          item.classList.remove("active");
+        });
+      });
     });
   });
 }
