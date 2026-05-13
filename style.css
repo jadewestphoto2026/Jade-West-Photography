@@ -1110,3 +1110,182 @@ footer {
     text-align: center;
   }
 }
+/* ==========================================
+   ASHLEY-STYLE ABOUT PAGE
+========================================== */
+
+.about-page-hero {
+  background: var(--cream);
+  color: var(--olive-brown);
+  padding: 42px 4vw 90px;
+  overflow: hidden;
+}
+
+.about-ash-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 6vw;
+  max-width: 1250px;
+  margin: 100px auto 0;
+  align-items: center;
+}
+
+.about-ash-copy h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.82;
+  margin-bottom: 30px;
+}
+
+.about-ash-copy h1 span {
+  display: block;
+  font-size: clamp(60px, 9vw, 130px);
+  letter-spacing: -5px;
+}
+
+.about-ash-copy h1 em {
+  display: block;
+  font-style: normal;
+  font-size: clamp(78px, 12vw, 170px);
+  letter-spacing: -7px;
+  color: rgba(91, 80, 61, 0.5);
+  margin-left: 90px;
+}
+
+.about-ash-copy p:last-child {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--soft-taupe);
+}
+
+.about-ash-photo img {
+  height: 700px;
+}
+
+.about-story-section {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 6vw;
+  padding: 120px 5vw;
+  background: var(--warm-white);
+  align-items: center;
+}
+
+.about-story-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.about-story-images img:first-child {
+  height: 620px;
+  margin-top: 80px;
+}
+
+.about-story-images img:last-child {
+  height: 620px;
+}
+
+.about-story-copy p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.about-love-list {
+  background: var(--deep-sage);
+  color: var(--warm-white);
+  padding: 100px 5vw;
+  text-align: center;
+}
+
+.about-love-list .eyebrow {
+  color: var(--warm-white);
+}
+
+.love-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 42px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.love-list-grid span {
+  font-size: clamp(28px, 4vw, 54px);
+  line-height: 1;
+  color: rgba(255, 250, 245, 0.85);
+}
+
+.about-partner-section,
+.about-dogs-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  padding: 120px 5vw;
+  background: var(--cream);
+  align-items: center;
+}
+
+.about-dogs-section {
+  background: var(--warm-white);
+}
+
+.partner-photo img,
+.dog-photo img {
+  height: 720px;
+}
+
+.partner-copy p,
+.dog-copy p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.about-belief-section {
+  background: var(--sage);
+  color: var(--charcoal);
+  padding: 120px 5vw;
+  text-align: center;
+}
+
+.about-belief-section h2 {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  font-size: clamp(50px, 8vw, 110px);
+}
+
+.about-belief-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .about-ash-hero,
+  .about-story-section,
+  .about-partner-section,
+  .about-dogs-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-ash-copy h1 em {
+    margin-left: 0;
+  }
+
+  .about-ash-photo img,
+  .about-story-images img:first-child,
+  .about-story-images img:last-child,
+  .partner-photo img,
+  .dog-photo img {
+    height: 520px;
+  }
+
+  .about-story-images {
+    grid-template-columns: 1fr;
+  }
+}
