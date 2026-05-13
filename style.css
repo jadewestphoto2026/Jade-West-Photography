@@ -1289,3 +1289,191 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================
+   ASHLEY-STYLE CONTACT PAGE
+========================================== */
+
+.contact-page-hero {
+  background: var(--cream);
+  color: var(--olive-brown);
+  padding: 42px 4vw 90px;
+  overflow: hidden;
+}
+
+.contact-ash-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 6vw;
+  max-width: 1250px;
+  margin: 100px auto 0;
+  align-items: center;
+}
+
+.contact-hero-copy h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.82;
+  margin-bottom: 34px;
+}
+
+.contact-hero-copy h1 span {
+  display: block;
+  font-size: clamp(58px, 8vw, 125px);
+  letter-spacing: -5px;
+}
+
+.contact-hero-copy h1 em {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 7px;
+  margin: 24px 0 24px 100px;
+  color: var(--charcoal);
+}
+
+.contact-hero-copy p:last-child {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--soft-taupe);
+}
+
+.contact-hero-image img {
+  height: 700px;
+}
+
+.contact-intro-section {
+  background: var(--warm-white);
+  padding: 90px 5vw;
+  text-align: center;
+}
+
+.contact-intro-section p {
+  max-width: 760px;
+  margin: 0 auto 20px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.contact-intro-section a {
+  color: var(--olive-brown);
+  text-decoration: underline;
+}
+
+.contact-form-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 6vw;
+  padding: 120px 5vw;
+  background: var(--cream);
+  align-items: start;
+}
+
+.contact-form-copy p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.contact-form {
+  display: grid;
+  gap: 22px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--olive-brown);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(91, 80, 61, 0.28);
+  background: var(--warm-white);
+  padding: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  color: var(--charcoal);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  justify-self: start;
+}
+
+.instagram-section {
+  padding: 110px 5vw;
+  background: var(--deep-sage);
+  color: var(--warm-white);
+  text-align: center;
+}
+
+.instagram-section .eyebrow {
+  color: var(--warm-white);
+}
+
+.instagram-handle {
+  display: inline-block;
+  font-size: clamp(44px, 7vw, 96px);
+  line-height: 1;
+  color: var(--warm-white);
+  margin-bottom: 50px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.instagram-grid img {
+  height: 260px;
+}
+
+.inclusive-section {
+  background: var(--sage);
+  color: var(--charcoal);
+  padding: 55px 5vw;
+  text-align: center;
+}
+
+.inclusive-section p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  line-height: 2;
+}
+
+@media (max-width: 900px) {
+  .contact-ash-hero,
+  .contact-form-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero-copy h1 em {
+    margin-left: 0;
+  }
+
+  .contact-hero-image img {
+    height: 520px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram-grid img {
+    height: 230px;
+  }
+}

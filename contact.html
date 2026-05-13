@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Jade West Photography</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="bee-cursor">
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <path class="wing" d="M22 24C8 16 7 4 18 6c9 2 12 13 12 13z"/>
+    <path class="wing" d="M40 24C54 16 55 4 44 6c-9 2-12 13-12 13z"/>
+    <ellipse class="body" cx="32" cy="34" rx="18" ry="14"/>
+    <path class="stripe" d="M24 22c-4 7-4 17 0 24"/>
+    <path class="stripe" d="M34 20c-4 8-4 20 0 28"/>
+    <path class="stripe" d="M44 25c-3 6-3 13 0 19"/>
+    <circle class="head" cx="15" cy="34" r="8"/>
+    <circle class="eye" cx="12" cy="31" r="1.8"/>
+    <path class="stinger" d="M50 34l10-5-3 10z"/>
+    <path class="antenna" d="M11 27C6 20 4 18 2 17"/>
+    <path class="antenna" d="M17 27c2-8 5-11 7-13"/>
+  </svg>
+</div>
+
+<header class="contact-page-hero">
+  <nav class="editorial-nav">
+    <div class="nav-left">
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="investment.html">Info</a>
+    </div>
+
+    <a href="index.html" class="editorial-logo">
+      <span>jade</span>
+      <span>west</span>
+      <small>photography</small>
+    </a>
+
+    <div class="nav-right">
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">Menu</button>
+  </nav>
+
+  <section class="contact-ash-hero">
+    <div class="contact-hero-copy">
+      <p class="eyebrow">Contact</p>
+      <h1>
+        <span>Let’s make</span>
+        <em>something</em>
+        <span>beautiful</span>
+      </h1>
+      <p>
+        Now that you’ve gotten to know me and my work a little bit, help me get to know you. The more details you share, the better I can help create photos that feel honest, intentional, and completely you.
+      </p>
+    </div>
+
+    <div class="contact-hero-image">
+      <img src="images/IMG_6994_Original.jpg" alt="Jade West Photography contact">
+    </div>
+  </section>
+</header>
+
+<main>
+
+  <section class="contact-intro-section">
+    <p>
+      Whether you’re planning a wedding, booking portraits, dreaming up a creative session, or just wondering if we’d be a good fit, I’d love to hear from you.
+    </p>
+
+    <p>
+      Looking for pricing info? Start <a href="investment.html">here</a>.
+    </p>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="contact-form-copy">
+      <p class="eyebrow">Inquire</p>
+      <h2>Tell me everything.</h2>
+      <p>
+        Share your date, location, session type, and any little details you already know. I’ll get back to you with availability, next steps, and package information.
+      </p>
+    </div>
+
+    <form class="contact-form" action="mailto:your@email.com" method="post" enctype="text/plain">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        What are you interested in?
+        <select name="session-type">
+          <option>Wedding</option>
+          <option>Portraits</option>
+          <option>Couples</option>
+          <option>Creative Session</option>
+          <option>Branding</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Date / Location
+        <input type="text" name="date-location">
+      </label>
+
+      <label>
+        Tell me about your vision
+        <textarea name="message" rows="7"></textarea>
+      </label>
+
+      <button type="submit" class="hero-button">Send Inquiry</button>
+    </form>
+  </section>
+
+  <section class="instagram-section">
+    <p class="eyebrow">Follow Me On Instagram</p>
+    <a href="https://www.instagram.com/jadewestphotography/" target="_blank" rel="noopener" class="instagram-handle">
+      @jadewestphotography
+    </a>
+
+    <div class="instagram-grid">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+      <img src="images/IMG_6994_Original.jpg" alt="Instagram preview">
+    </div>
+  </section>
+
+  <section class="inclusive-section">
+    <p>
+      LGBTQ-friendly · BIPOC inclusive · All skin colors, body types, love stories, and creative visions are welcomed here.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Jade West Photography</p>
+  <p>Southern California · Weddings · Portraits · Creative Direction</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
