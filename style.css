@@ -283,16 +283,18 @@ a {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-size: 12px;
-  letter-spacing: 6px;
-  color: rgba(255, 250, 245, 0.95); /* "YOUR" also white */
+  font-size: 18px;            /* larger "YOUR" */
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: rgba(255, 250, 245, 0.98); /* bright white */
   margin: 22px 0 0 100px;
   text-transform: uppercase;
 }
 
 .hero-title span:last-child {
   margin-left: 160px;
-  color: rgba(255, 250, 245, 0.92); /* brighter and more readable */
+  color: var(--olive-brown);  /* same dark olive as the Experience button */
+  opacity: 0.5;              /* soft translucent effect while staying legible */
 }
 
 .hero-bottom-copy {
