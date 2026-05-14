@@ -206,8 +206,10 @@ a {
 .hero-label {
   text-align: center;
   margin-top: 70px;
+  margin-bottom: 35px; /* adds breathing room above the collage */
   position: relative;
   z-index: 4;
+}
 }
 
 .hero-label p {
@@ -258,7 +260,7 @@ a {
   left: 34%;
   bottom: -25px;
   z-index: 5;
-  color: rgba(255, 250, 245, 0.96);
+  color: rgba(255, 250, 245, 0.98);
   text-align: left;
 }
 
@@ -272,6 +274,7 @@ a {
   display: block;
   font-size: clamp(58px, 8vw, 118px);
   letter-spacing: -4px;
+  color: rgba(255, 250, 245, 0.98); /* both REIMAGINE and STORY are white */
 }
 
 .hero-title em {
@@ -280,14 +283,14 @@ a {
   font-style: normal;
   font-size: 12px;
   letter-spacing: 6px;
-  color: var(--charcoal);
+  color: rgba(255, 250, 245, 0.95); /* "YOUR" also white */
   margin: 22px 0 0 100px;
   text-transform: uppercase;
 }
 
 .hero-title span:last-child {
-  color: rgba(91, 80, 61, 0.42);
   margin-left: 160px;
+  color: rgba(255, 250, 245, 0.92); /* brighter and more readable */
 }
 
 .hero-bottom-copy {
@@ -295,16 +298,17 @@ a {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  max-width: 700px;
+  max-width: 900px;
   margin: 40px auto 0;
-  text-align: center;
 }
 
 .hero-bottom-copy p {
-  max-width: 390px;
+  max-width: 420px;
   font-size: 14px;
   line-height: 1.9;
   color: var(--soft-taupe);
+  text-align: center; /* centers the text */
+  margin: 0;
 }
 
 .hero-button {
