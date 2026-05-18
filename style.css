@@ -1688,18 +1688,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .portfolio-social-grid img {
+   .portfolio-social-grid img {
     height: 230px;
   }
-}
-/* Crop the "Chaos Crew" image on the About page */
-.about-story-section img,
-.chaos-crew-section img,
-.about-section img {
-  width: 100%;
-  height: 920px;              /* controls how much of the image is visible */
-  object-fit: cover;          /* crops the image to fill the frame */
-  object-position: center 18%; /* moves the crop upward to hide the floor and socks */
-  border-radius: 24px;
-  display: block;
 }
