@@ -1757,3 +1757,19 @@ footer {
     border-bottom: 1px solid rgba(91, 80, 61, 0.22);
   }
 }
+@media (max-width: 900px) {
+  .editorial-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-logo {
+    justify-self: center;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    margin-top: 0;
+  }
+}
