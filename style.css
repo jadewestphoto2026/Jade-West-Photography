@@ -1692,3 +1692,68 @@ footer {
     height: 230px;
   }
 }
+/* ==========================================
+   MOBILE NAVIGATION FIX
+========================================== */
+
+@media (max-width: 900px) {
+  .editorial-nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .editorial-logo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .menu-toggle {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 8px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    background: var(--cream);
+  }
+
+  .nav-left {
+    grid-row: 2;
+    margin-top: 28px;
+  }
+
+  .nav-right {
+    grid-row: 3;
+  }
+
+  .nav-left.active,
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    border-top: 1px solid rgba(91, 80, 61, 0.22);
+  }
+
+  .nav-right a:last-child {
+    border-bottom: 1px solid rgba(91, 80, 61, 0.22);
+  }
+}
