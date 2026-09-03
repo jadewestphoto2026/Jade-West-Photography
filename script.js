@@ -171,24 +171,6 @@ if (contactForm && contactFormStatus && contactForm.dataset.ajaxEndpoint) {
         throw new Error(result.message || "Unable to send inquiry");
       }
 
-      if (contactForm.dataset.sheetEndpoint) {
-        const sheetData = new URLSearchParams();
-
-        Object.entries(formData).forEach(([key, value]) => {
-          sheetData.append(key, value);
-        });
-
-        try {
-          await fetch(contactForm.dataset.sheetEndpoint, {
-            method: "POST",
-            mode: "no-cors",
-            body: sheetData,
-          });
-        } catch (sheetError) {
-          console.warn("The inquiry email was sent, but the inquiry log could not be updated.", sheetError);
-        }
-      }
-
       contactForm.reset();
       contactFormStatus.textContent =
         "Thank you! Your inquiry is on its way. I’ll be in touch soon.";
