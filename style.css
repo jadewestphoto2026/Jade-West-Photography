@@ -375,23 +375,46 @@ h2 {
 }
 
 /* ==========================================
-   GALLERY GRID
+   HOME PORTFOLIO CAROUSEL
 ========================================== */
 
-.gallery-grid {
-  padding: 0 5vw 110px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.home-work-carousel {
+  width: 100%;
+  padding-bottom: 110px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
 
-.gallery-grid img {
-  height: 520px;
+.home-work-track {
+  display: flex;
+  width: max-content;
+  animation: home-work-scroll 112s linear infinite;
+  will-change: transform;
 }
 
-.gallery-grid img:nth-child(2),
-.gallery-grid img:nth-child(5) {
-  height: 680px;
+.home-work-set {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.home-work-set img {
+  flex: 0 0 auto;
+  width: clamp(240px, 27vw, 380px);
+  height: clamp(340px, 38vw, 520px);
+  object-fit: cover;
+}
+
+.home-work-carousel:hover .home-work-track {
+  animation-play-state: paused;
+}
+
+@keyframes home-work-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* ==========================================
@@ -598,17 +621,27 @@ footer {
     padding-top: 56px;
   }
 
-  .gallery-grid,
   .experience-cards,
   .about-section {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid img,
-  .gallery-grid img:nth-child(2),
-  .gallery-grid img:nth-child(5),
   .about-section img {
     height: 520px;
+  }
+
+  .home-work-carousel {
+    padding-bottom: 80px;
+  }
+
+  .home-work-set {
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .home-work-set img {
+    width: 220px;
+    height: 320px;
   }
 
   .experience-cards div {
@@ -1776,20 +1809,24 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-work-carousel,
   .portfolio-social-carousel {
     overflow-x: auto;
     -webkit-mask-image: none;
     mask-image: none;
   }
 
+  .home-work-track,
   .portfolio-social-track {
     animation: none;
   }
 
+  .home-work-set[aria-hidden="true"],
   .portfolio-social-set[aria-hidden="true"] {
     display: none;
   }
 
+  .home-work-set img,
   .portfolio-social-set img {
     scroll-snap-align: start;
   }
