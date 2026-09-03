@@ -407,10 +407,6 @@ h2 {
   object-fit: cover;
 }
 
-.home-work-carousel:hover .home-work-track {
-  animation-play-state: paused;
-}
-
 @keyframes home-work-scroll {
   to {
     transform: translateX(-50%);
