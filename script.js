@@ -77,16 +77,61 @@ document.addEventListener("mousemove", (event) => {
   }
 });
 
-document.querySelectorAll(".shoot-stack").forEach((stack) => {
-  stack.addEventListener("toggle", () => {
-    if (!stack.open || !stack.parentElement) {
+document.querySelectorAll(".shoot-stack").forEach((stack, stackIndex) => {
+  const gallery = stack.querySelector(".shoot-stack-gallery");
+  const grid = stack.parentElement;
+  const stackId = `shoot-${stackIndex}`;
+
+  stack.dataset.shootStackId = stackId;
+
+  function returnPhotosToStack() {
+    if (!gallery || !grid) {
       return;
     }
 
-    stack.parentElement.querySelectorAll(".shoot-stack[open]").forEach((otherStack) => {
+    grid.querySelectorAll(`[data-shoot-owner="${stackId}"]`).forEach((item) => {
+      const image = item.querySelector("img");
+
+      if (image) {
+        gallery.appendChild(image);
+      }
+
+      item.remove();
+    });
+
+  }
+
+  function flowPhotosIntoGrid() {
+    if (!gallery || !grid) {
+      return;
+    }
+
+    let insertionPoint = stack;
+
+    Array.from(gallery.children).forEach((image, imageIndex) => {
+      const item = document.createElement("figure");
+      item.className = "shoot-stack-expanded-item";
+      item.dataset.shootOwner = stackId;
+      item.style.setProperty("--shoot-item-index", imageIndex);
+      item.appendChild(image);
+      insertionPoint.insertAdjacentElement("afterend", item);
+      insertionPoint = item;
+    });
+
+  }
+
+  stack.addEventListener("toggle", () => {
+    if (!stack.open) {
+      returnPhotosToStack();
+      return;
+    }
+
+    grid.querySelectorAll(".shoot-stack[open]").forEach((otherStack) => {
       if (otherStack !== stack) {
         otherStack.open = false;
       }
     });
+
+    flowPhotosIntoGrid();
   });
 });
