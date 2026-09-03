@@ -1443,8 +1443,14 @@ footer {
   line-height: 1.6;
 }
 
-.contact-form-success:target {
+.contact-form-success:target,
+.contact-form-success.is-visible {
   display: block;
+}
+
+.contact-form-success.is-error {
+  color: #7b2f2f;
+  border-color: rgba(123, 47, 47, 0.35);
 }
 
 .contact-form label {
@@ -1488,6 +1494,11 @@ footer {
 .contact-form button {
   border: none;
   justify-self: start;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .instagram-section {

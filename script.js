@@ -135,3 +135,59 @@ document.querySelectorAll(".shoot-stack").forEach((stack, stackIndex) => {
     flowPhotosIntoGrid();
   });
 });
+
+const contactForm = document.querySelector(".contact-form");
+const contactFormStatus = document.querySelector(".contact-form-success");
+
+if (contactForm && contactFormStatus && contactForm.dataset.ajaxEndpoint) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "";
+    const formData = Object.fromEntries(new FormData(contactForm).entries());
+
+    contactFormStatus.classList.remove("is-visible", "is-error");
+    contactForm.setAttribute("aria-busy", "true");
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
+    try {
+      const response = await fetch(contactForm.dataset.ajaxEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json().catch(() => ({}));
+      const rejected = result.success === false || result.success === "false";
+
+      if (!response.ok || rejected) {
+        throw new Error(result.message || "Unable to send inquiry");
+      }
+
+      contactForm.reset();
+      contactFormStatus.textContent =
+        "Thank you! Your inquiry is on its way. I’ll be in touch soon.";
+      contactFormStatus.classList.add("is-visible");
+    } catch (error) {
+      contactFormStatus.textContent =
+        "Something went wrong while sending your inquiry. Please try again or email me directly at jadewestphoto@gmail.com.";
+      contactFormStatus.classList.add("is-visible", "is-error");
+    } finally {
+      contactForm.removeAttribute("aria-busy");
+
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+
+      contactFormStatus.focus();
+    }
+  });
+}

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=20260903d" />
+  <link rel="stylesheet" href="style.css?v=20260903e" />
 </head>
 <body>
 
@@ -99,11 +99,16 @@
     </div>
 
     <div class="contact-form-wrap">
-      <p id="thank-you" class="contact-form-success" tabindex="-1">
+      <p id="thank-you" class="contact-form-success" role="status" aria-live="polite" tabindex="-1">
         Thank you! Your inquiry is on its way. I’ll be in touch soon.
       </p>
 
-      <form class="contact-form" action="https://formsubmit.co/jadewestphoto@gmail.com" method="post">
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/jadewestphoto@gmail.com"
+        method="post"
+        data-ajax-endpoint="https://formsubmit.co/ajax/jadewestphoto@gmail.com"
+      >
         <input type="hidden" name="_subject" value="New photography inquiry from jadewestphotography.com">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://jadewestphotography.com/contact.html#thank-you">
@@ -195,6 +200,6 @@
   <p>Southern California · Weddings · Portraits · Creative Direction</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=20260903e"></script>
 </body>
 </html>
