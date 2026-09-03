@@ -76,3 +76,17 @@ document.addEventListener("mousemove", (event) => {
     }, 1100);
   }
 });
+
+document.querySelectorAll(".shoot-stack").forEach((stack) => {
+  stack.addEventListener("toggle", () => {
+    if (!stack.open || !stack.parentElement) {
+      return;
+    }
+
+    stack.parentElement.querySelectorAll(".shoot-stack[open]").forEach((otherStack) => {
+      if (otherStack !== stack) {
+        otherStack.open = false;
+      }
+    });
+  });
+});

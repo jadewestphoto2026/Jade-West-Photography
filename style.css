@@ -1875,3 +1875,240 @@ footer {
     margin-top: 0;
   }
 }
+
+/* ==========================================
+   EXPANDABLE PHOTO-SHOOT STACKS
+========================================== */
+
+.portfolio-masonry {
+  align-items: start;
+}
+
+.portfolio-single,
+.shoot-stack {
+  min-width: 0;
+  margin: 0;
+}
+
+.portfolio-single img,
+.shoot-stack-frame > img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+}
+
+.shoot-stack {
+  text-align: left;
+}
+
+.shoot-stack[open] {
+  grid-column: 1 / -1;
+}
+
+.shoot-stack-summary {
+  display: block;
+  list-style: none;
+  position: relative;
+}
+
+.shoot-stack-summary::-webkit-details-marker {
+  display: none;
+}
+
+.shoot-stack-summary::marker {
+  content: "";
+}
+
+.shoot-stack-frame {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  margin: 12px 12px 0 0;
+  background: var(--warm-white);
+}
+
+.shoot-stack-frame::before,
+.shoot-stack-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--warm-white);
+  border: 1px solid rgba(91, 80, 61, 0.24);
+  pointer-events: none;
+  z-index: -1;
+  transition: transform 0.35s ease;
+}
+
+.shoot-stack-frame::before {
+  transform: translate(6px, -6px) rotate(1.1deg);
+}
+
+.shoot-stack-frame::after {
+  transform: translate(12px, -11px) rotate(-0.9deg);
+}
+
+.shoot-stack-summary:hover .shoot-stack-frame::before,
+.shoot-stack-summary:focus-visible .shoot-stack-frame::before {
+  transform: translate(8px, -8px) rotate(1.6deg);
+}
+
+.shoot-stack-summary:hover .shoot-stack-frame::after,
+.shoot-stack-summary:focus-visible .shoot-stack-frame::after {
+  transform: translate(15px, -14px) rotate(-1.4deg);
+}
+
+.shoot-stack-summary:focus-visible {
+  outline: none;
+}
+
+.shoot-stack-summary:focus-visible .shoot-stack-frame {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+.shoot-stack-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: block;
+  padding: 72px 24px 22px;
+  color: var(--warm-white);
+  background: linear-gradient(to top, rgba(23, 23, 23, 0.82), rgba(23, 23, 23, 0));
+}
+
+.shoot-stack-title {
+  display: block;
+  margin-bottom: 7px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.shoot-stack-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.shoot-stack-count {
+  margin-left: auto;
+  opacity: 0.78;
+}
+
+.shoot-stack-action-open {
+  display: none;
+}
+
+.shoot-stack-arrow {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.shoot-stack[open] > .shoot-stack-summary {
+  width: calc((100% - 36px) / 3);
+  margin: 0 auto 28px;
+}
+
+.shoot-stack[open] .shoot-stack-action-closed {
+  display: none;
+}
+
+.shoot-stack[open] .shoot-stack-action-open {
+  display: inline;
+}
+
+.shoot-stack[open] .shoot-stack-arrow {
+  transform: rotate(180deg);
+}
+
+.shoot-stack-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 10px;
+  animation: shoot-stack-reveal 0.45s ease both;
+}
+
+.shoot-stack-gallery img,
+.shoot-stack-gallery img:nth-child(2),
+.shoot-stack-gallery img:nth-child(5) {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+@keyframes shoot-stack-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-single img,
+  .shoot-stack-frame > img {
+    height: 520px;
+  }
+
+  .shoot-stack[open] > .shoot-stack-summary {
+    width: 100%;
+  }
+
+  .shoot-stack-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .shoot-stack-gallery img,
+  .shoot-stack-gallery img:nth-child(2),
+  .shoot-stack-gallery img:nth-child(5) {
+    height: min(620px, 125vw);
+  }
+}
+
+@media (max-width: 620px) {
+  .portfolio-single img,
+  .shoot-stack-frame > img {
+    height: 440px;
+  }
+
+  .shoot-stack-overlay {
+    padding: 70px 18px 18px;
+  }
+
+  .shoot-stack-title {
+    font-size: 25px;
+  }
+
+  .shoot-stack-action {
+    flex-wrap: wrap;
+    gap: 7px 9px;
+    font-size: 10px;
+  }
+
+  .shoot-stack-count {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shoot-stack-frame::before,
+  .shoot-stack-frame::after,
+  .shoot-stack-arrow {
+    transition: none;
+  }
+
+  .shoot-stack-gallery {
+    animation: none;
+  }
+}
