@@ -1432,6 +1432,10 @@ footer {
   min-width: 0;
 }
 
+.contact-submission-frame {
+  display: none;
+}
+
 .contact-form-success {
   display: none;
   margin: 0 0 28px;
