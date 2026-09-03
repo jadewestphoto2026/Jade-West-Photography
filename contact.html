@@ -72,7 +72,7 @@
     </div>
 
     <div class="contact-hero-image">
-      <img src="images/IMG_6994_Original.jpg" alt="Jade West Photography contact">
+      <img src="images/contact-jade-orange-orchard.jpg" alt="Jade West smiling in front of an orange tree">
     </div>
   </section>
 </header>
@@ -98,41 +98,52 @@
       </p>
     </div>
 
-    <form class="contact-form" action="mailto:your@email.com" method="post" enctype="text/plain">
+    <div class="contact-form-wrap">
+      <p id="thank-you" class="contact-form-success" tabindex="-1">
+        Thank you! Your inquiry is on its way. I’ll be in touch soon.
+      </p>
+
+      <form class="contact-form" action="https://formsubmit.co/jadewestphoto@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="New photography inquiry from jadewestphotography.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://jadewestphotography.com/contact.html#thank-you">
+        <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
       <label>
         Name
-        <input type="text" name="name" required>
+        <input type="text" name="Name" autocomplete="name" required>
       </label>
 
       <label>
         Email
-        <input type="email" name="email" required>
+        <input type="email" name="email" autocomplete="email" required>
       </label>
 
       <label>
         What are you interested in?
-        <select name="session-type">
+        <select name="Session type">
           <option>Wedding</option>
           <option>Portraits</option>
           <option>Couples</option>
           <option>Creative Session</option>
-          <option>Branding</option>
+          <option>Event Photography</option>
           <option>Other</option>
         </select>
       </label>
 
       <label>
         Date / Location
-        <input type="text" name="date-location">
+        <input type="text" name="Date / Location">
       </label>
 
       <label>
         Tell me about your vision
-        <textarea name="message" rows="7"></textarea>
+        <textarea name="Message" rows="7"></textarea>
       </label>
 
       <button type="submit" class="hero-button">Send Inquiry</button>
-    </form>
+      </form>
+    </div>
   </section>
 
   <section class="portfolio-instagram-section">

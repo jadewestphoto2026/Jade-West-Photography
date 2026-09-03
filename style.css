@@ -1428,6 +1428,25 @@ footer {
   gap: 22px;
 }
 
+.contact-form-wrap {
+  min-width: 0;
+}
+
+.contact-form-success {
+  display: none;
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(91, 80, 61, 0.28);
+  background: var(--warm-white);
+  color: var(--deep-sage);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.contact-form-success:target {
+  display: block;
+}
+
 .contact-form label {
   display: grid;
   gap: 8px;
@@ -1452,6 +1471,18 @@ footer {
 
 .contact-form textarea {
   resize: vertical;
+}
+
+.contact-form .form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .contact-form button {
